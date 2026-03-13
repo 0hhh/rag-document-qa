@@ -1,0 +1,22 @@
+# streamlit
+# langchain
+# langchain-community
+# langchain-huggingface
+# sentence-transformers
+# faiss-cpu
+# huggingface_hub==0.23.4
+# pypdf
+# python-dotenv
+
+streamlit
+langchain
+langchain-community
+langchain-huggingface
+sentence-transformers
+faiss-cpu
+# huggingface_hub==0.24.7
+groq
+transformers
+pypdf
+python-dotenv
+python-docx
