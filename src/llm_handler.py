@@ -1,11 +1,22 @@
+import os
+import streamlit as st
 from groq import Groq
 from dotenv import load_dotenv
-import os
 
 load_dotenv()
 
+# def get_llm():
+#     client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+#     return client
 def get_llm():
-    client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+
+    api_key = os.getenv("GROQ_API_KEY")
+
+    if not api_key and "GROQ_API_KEY" in st.secrets:
+        api_key = st.secrets["GROQ_API_KEY"]
+
+    client = Groq(api_key=api_key)
+
     return client
 
 
@@ -64,5 +75,6 @@ Answer clearly and cite the page numbers if possible.
         ],
         temperature=0.3
     )
+
 
     return completion.choices[0].message.content
