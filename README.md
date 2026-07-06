@@ -4,6 +4,8 @@ An AI-powered **Document Question Answering System** that allows users to upload
 
 The system retrieves relevant document sections using **vector similarity search** and generates answers using **Llama 3.1 via Groq API**.
 
+Live URL: https://ai-document-rag-assistant.streamlit.app/
+
 ---
 
 ## 🚀 Features
